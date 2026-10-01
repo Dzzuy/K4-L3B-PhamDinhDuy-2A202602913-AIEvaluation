@@ -6,14 +6,14 @@ Tài liệu này định nghĩa 6 mốc tiến độ (Checkpoints CP0–CP5) tro
 
 ## Bảng tổng quan tiến độ (Schedule)
 
-| Checkpoint | Khoảng thời gian | Mốc thời gian mẫu | Nội dung trọng tâm | Kết quả kiểm tra chính |
-|---|---|---|---|---|
-| **CP0** Setup | Start + 0–15m | 9:15–9:30 | Môi trường, `.env`, baseline tests | 42 failed baseline |
-| **CP1** Data Models | Start + 15–30m | 9:30–9:45 | Task 1: `QAPair`, `EvalResult`, `overall_score` | 3 passed |
-| **CP2** Metrics | Start + 30–65m | 9:45–10:20 | Task 2–3: RAGAS metrics & LLMJudge | 21 passed, 20 failed, 1 skipped |
-| **CP3** Runner & Analyzer | Start + 65–85m | 10:20–10:40 | Task 4–5: BenchmarkRunner, FailureAnalyzer | 41 passed, 1 skipped (full suite) |
-| **CP4** Dataset & Benchmark | Start + 85–140m | 10:40–11:35 | 20 QA golden dataset, RAG run, Exercise 3.2 & 3.3 | Validator PASS, artifacts generated |
-| **CP5** Reflection & Finalize | Start + 140–165m | 11:35–12:00 | `reflection.md`, copy `solution/solution.py`, kiểm tra cuối | 41 passed, validator PASS, clean repo |
+| Checkpoint                    | Khoảng thời gian | Mốc thời gian mẫu | Nội dung trọng tâm                                          | Kết quả kiểm tra chính                |
+| -------------------------------| ------------------| -------------------| -------------------------------------------------------------| ---------------------------------------|
+| **CP0** Setup                 | Start + 0–15m    | 9:15–9:30         | Môi trường, `.env`, baseline tests                          | 42 failed baseline                    |
+| **CP1** Data Models           | Start + 15–30m   | 9:30–9:45         | Task 1: `QAPair`, `EvalResult`, `overall_score`             | 3 passed                              |
+| **CP2** Metrics               | Start + 30–65m   | 9:45–10:20        | Task 2–3: RAGAS metrics & LLMJudge                          | 21 passed, 20 failed, 1 skipped       |
+| **CP3** Runner & Analyzer     | Start + 65–85m   | 10:20–10:40       | Task 4–5: BenchmarkRunner, FailureAnalyzer                  | 41 passed, 1 skipped (full suite)     |
+| **CP4** Dataset & Benchmark   | Start + 85–140m  | 10:40–11:35       | 20 QA golden dataset, RAG run, Exercise 3.2 & 3.3           | Validator PASS, artifacts generated   |
+| **CP5** Reflection & Finalize | Start + 140–165m | 11:35–12:00       | `reflection.md`, copy `solution/solution.py`, kiểm tra cuối | 41 passed, validator PASS, clean repo |
 
 ---
 
@@ -24,7 +24,7 @@ Tài liệu này định nghĩa 6 mốc tiến độ (Checkpoints CP0–CP5) tro
 - **Sản phẩm:**
   - Virtual environment `.venv` đã được tạo và kích hoạt.
   - Toàn bộ dependencies trong `requirements.txt` đã được cài đặt.
-  - File `.env` được tạo từ `.env.example` (điền `OPENAI_API_KEY` cho Part 3).
+  - File `.env` được tạo từ `.env.example` (điền key vào `OPENROUTER_API_KEY` cho Part 3; giữ key ngoài Git).
 - **Cần hiểu:**
   - Cấu trúc thư mục của repository và vai trò của từng module: `template.py` (evaluation engine) vs `domain_assistant.py` (system under evaluation).
   - Tình trạng khởi đầu của starter code: 42 tests được thu thập và 42 tests failed (do các TODO chưa được implement).
